@@ -1,0 +1,6 @@
+<launch>
+	<node pkg="mpu9255" name="MPU9255_node" type="MPU9255_node">
+	</node>
+ 
+
+</launch>

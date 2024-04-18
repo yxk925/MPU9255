@@ -1,0 +1,13 @@
+<launch>
+	<node pkg="MPU9255" name="MPU9255_node" type="MPU9255_node"/>
+ 
+	<node pkg="imu_filter_madgwick" type="imu_filter_node" name="imu_filter_madgwick" output="screen">
+		<param name="use_mag" value="true"/>
+		<param name="do_bias_estimation" value="true"/>
+		<param name="do_adaptive_gain" value="true"/>
+		<param name="gain_acc" value="0.01"/>
+		<param name="gain_mag" value="0.01"/>
+ 		<param name="publish_tf"    value="false"/>
+	</node>
+
+</launch>
